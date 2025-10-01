@@ -1,5 +1,7 @@
 import { Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
 
+import { Link } from "react-router-dom";
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
@@ -33,8 +35,8 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4">Product</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><a href="#features" className="hover:text-accent transition-colors">Features</a></li>
-              <li><a href="#" className="hover:text-accent transition-colors">Pricing</a></li>
+              <li><Link to="/features" className="hover:text-accent transition-colors">Features</Link></li>
+              <li><Link to="/pricing" className="hover:text-accent transition-colors">Pricing</Link></li>
               <li><a href="#" className="hover:text-accent transition-colors">Security</a></li>
               <li><a href="#" className="hover:text-accent transition-colors">Roadmap</a></li>
             </ul>
@@ -43,10 +45,10 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4">Company</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><a href="#" className="hover:text-accent transition-colors">About</a></li>
+              <li><Link to="/about" className="hover:text-accent transition-colors">About</Link></li>
               <li><a href="#" className="hover:text-accent transition-colors">Blog</a></li>
               <li><a href="#" className="hover:text-accent transition-colors">Careers</a></li>
-              <li><a href="#" className="hover:text-accent transition-colors">Contact</a></li>
+              <li><Link to="/contact" className="hover:text-accent transition-colors">Contact</Link></li>
             </ul>
           </div>
 
