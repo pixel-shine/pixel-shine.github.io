@@ -12,6 +12,7 @@ import Contact from "./pages/Contact";
 import Security from "./pages/Security";
 import Roadmap from "./pages/Roadmap";
 import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
 import Careers from "./pages/Careers";
 import Documentation from "./pages/Documentation";
 import HelpCenter from "./pages/HelpCenter";
@@ -41,6 +42,7 @@ const App = () => (
           <Route path="/security" element={<Security />} />
           <Route path="/roadmap" element={<Roadmap />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/careers" element={<Careers />} />
           <Route path="/documentation" element={<Documentation />} />
           <Route path="/help-center" element={<HelpCenter />} />
