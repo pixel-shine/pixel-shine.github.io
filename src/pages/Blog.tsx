@@ -1,4 +1,3 @@
-
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Calendar, User } from "lucide-react";
@@ -11,7 +10,7 @@ const Blog = () => {
       date: "March 15, 2024",
       author: "Sarah Johnson",
       category: "Technology",
-      slug: "future-mobile-development"
+      link: "/blog/mobile-app-development"
     },
     {
       title: "Building Secure Mobile Applications",
@@ -19,7 +18,7 @@ const Blog = () => {
       date: "March 10, 2024",
       author: "Mike Chen",
       category: "Security",
-      slug: "building-secure-apps"
+      link: "/blog/secure-mobile-apps"
     },
     {
       title: "User Experience Design Principles",
@@ -27,7 +26,7 @@ const Blog = () => {
       date: "March 5, 2024",
       author: "Emily Rodriguez",
       category: "Design",
-      slug: "ux-design-principles"
+      link: "/blog/ux-design-principles"
     },
     {
       title: "Performance Optimization Tips",
@@ -35,7 +34,7 @@ const Blog = () => {
       date: "February 28, 2024",
       author: "David Park",
       category: "Performance",
-      slug: "performance-optimization"
+      link: "/blog/performance-optimization"
     }
   ];
 
@@ -46,19 +45,17 @@ const Blog = () => {
         <p className="text-lg text-muted-foreground text-center max-w-3xl mx-auto mb-12">
           Stay updated with the latest insights, tips, and news from our team of experts.
         </p>
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {blogPosts.map((post, index) => (
-            <Card key={index} className="hover:shadow-lg transition-shadow group cursor-pointer">
+            <Card key={index} className="hover:shadow-lg transition-shadow cursor-pointer" onClick={() => window.location.href = post.link}>
               <CardHeader>
                 <div className="mb-3">
                   <span className="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">
                     {post.category}
                   </span>
                 </div>
-                <h3 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">
-                  {post.title}
-                </h3>
+                <h3 className="text-xl font-semibold mb-2">{post.title}</h3>
                 <p className="text-muted-foreground text-sm">{post.excerpt}</p>
               </CardHeader>
               <CardContent>
@@ -72,12 +69,7 @@ const Blog = () => {
                     {post.author}
                   </div>
                 </div>
-                <a 
-                  href={`/blog/${post.slug}`}
-                  className="text-primary hover:text-primary/80 text-sm font-medium transition-colors"
-                >
-                  Read More →
-                </a>
+                <a href={post.link} className="text-primary hover:underline text-sm font-medium">Read More →</a>
               </CardContent>
             </Card>
           ))}

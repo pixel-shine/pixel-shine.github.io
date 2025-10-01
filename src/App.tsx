@@ -12,7 +12,10 @@ import Contact from "./pages/Contact";
 import Security from "./pages/Security";
 import Roadmap from "./pages/Roadmap";
 import Blog from "./pages/Blog";
-import BlogPost from "./pages/BlogPost";
+import MobileAppDevelopment from "./pages/blog/MobileAppDevelopment";
+import SecureMobileApps from "./pages/blog/SecureMobileApps";
+import UXDesignPrinciples from "./pages/blog/UXDesignPrinciples";
+import PerformanceOptimization from "./pages/blog/PerformanceOptimization";
 import Careers from "./pages/Careers";
 import Documentation from "./pages/Documentation";
 import HelpCenter from "./pages/HelpCenter";
@@ -42,7 +45,10 @@ const App = () => (
           <Route path="/security" element={<Security />} />
           <Route path="/roadmap" element={<Roadmap />} />
           <Route path="/blog" element={<Blog />} />
-          <Route path="/blog/:slug" element={<BlogPost />} />
+          <Route path="/blog/mobile-app-development" element={<MobileAppDevelopment />} />
+          <Route path="/blog/secure-mobile-apps" element={<SecureMobileApps />} />
+          <Route path="/blog/ux-design-principles" element={<UXDesignPrinciples />} />
+          <Route path="/blog/performance-optimization" element={<PerformanceOptimization />} />
           <Route path="/careers" element={<Careers />} />
           <Route path="/documentation" element={<Documentation />} />
           <Route path="/help-center" element={<HelpCenter />} />
