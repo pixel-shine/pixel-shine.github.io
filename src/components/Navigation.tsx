@@ -44,8 +44,10 @@ const Navigation = () => {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Button variant="hero" size="sm">
-              Get Started
+            <Button variant="hero" size="sm" asChild>
+              <Link to="/trial">
+                Get Started
+              </Link>
             </Button>
           </div>
 
@@ -75,8 +77,10 @@ const Navigation = () => {
                   {item.label}
                 </Link>
               ))}
-              <Button variant="hero" size="sm" className="w-fit">
-                Get Started
+              <Button variant="hero" size="sm" className="w-fit" asChild>
+                <Link to="/trial">
+                  Get Started
+                </Link>
               </Button>
             </div>
           </div>
