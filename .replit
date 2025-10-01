@@ -4,3 +4,30 @@ expertMode = true
 
 [nix]
 channel = "stable-25_05"
+
+[deployment]
+run = ["sh", "-c", "npx vite preview --host 0.0.0.0 --port 5000"]
+build = ["sh", "-c", "npm run build"]
+
+[workflows]
+
+[[workflows.workflow]]
+name = "Deploy to GitHub Pages"
+author = 45562255
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "npm run build"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "git add dist -f"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "git commit -m \"Deploy to GitHub Pages\""
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "git subtree push --prefix dist origin gh-pages"
