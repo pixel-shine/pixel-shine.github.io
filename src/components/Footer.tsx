@@ -37,8 +37,8 @@ const Footer = () => {
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li><Link to="/features" className="hover:text-accent transition-colors">Features</Link></li>
               <li><Link to="/pricing" className="hover:text-accent transition-colors">Pricing</Link></li>
-              <li><a href="#" className="hover:text-accent transition-colors">Security</a></li>
-              <li><a href="#" className="hover:text-accent transition-colors">Roadmap</a></li>
+              <li><Link to="/security" className="hover:text-accent transition-colors">Security</Link></li>
+              <li><Link to="/roadmap" className="hover:text-accent transition-colors">Roadmap</Link></li>
             </ul>
           </div>
 
@@ -46,8 +46,8 @@ const Footer = () => {
             <h4 className="font-semibold mb-4">Company</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li><Link to="/about" className="hover:text-accent transition-colors">About</Link></li>
-              <li><a href="#" className="hover:text-accent transition-colors">Blog</a></li>
-              <li><a href="#" className="hover:text-accent transition-colors">Careers</a></li>
+              <li><Link to="/blog" className="hover:text-accent transition-colors">Blog</Link></li>
+              <li><Link to="/careers" className="hover:text-accent transition-colors">Careers</Link></li>
               <li><Link to="/contact" className="hover:text-accent transition-colors">Contact</Link></li>
             </ul>
           </div>
@@ -55,10 +55,10 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4">Resources</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><a href="#" className="hover:text-accent transition-colors">Documentation</a></li>
-              <li><a href="#" className="hover:text-accent transition-colors">Help Center</a></li>
-              <li><a href="#" className="hover:text-accent transition-colors">Community</a></li>
-              <li><a href="#" className="hover:text-accent transition-colors">API</a></li>
+              <li><Link to="/documentation" className="hover:text-accent transition-colors">Documentation</Link></li>
+              <li><Link to="/help-center" className="hover:text-accent transition-colors">Help Center</Link></li>
+              <li><Link to="/community" className="hover:text-accent transition-colors">Community</Link></li>
+              <li><Link to="/documentation" className="hover:text-accent transition-colors">API</Link></li>
             </ul>
           </div>
         </div>
@@ -66,9 +66,9 @@ const Footer = () => {
         <div className="pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
           <p>© {currentYear} MobileApp. All rights reserved.</p>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-accent transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-accent transition-colors">Terms of Service</a>
-            <a href="#" className="hover:text-accent transition-colors">Cookie Policy</a>
+            <Link to="/privacy-policy" className="hover:text-accent transition-colors">Privacy Policy</Link>
+            <Link to="/terms-of-service" className="hover:text-accent transition-colors">Terms of Service</Link>
+            <Link to="/cookie-policy" className="hover:text-accent transition-colors">Cookie Policy</Link>
           </div>
         </div>
       </div>
