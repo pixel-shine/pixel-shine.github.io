@@ -10,11 +10,16 @@ run = ["sh", "-c", "npx vite preview --host 0.0.0.0 --port 5000"]
 build = ["sh", "-c", "npm run build"]
 
 [workflows]
+runButton = "Dev Server"
 
 [[workflows.workflow]]
 name = "Deploy to GitHub Pages"
 author = 45562255
 mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "npm install"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
@@ -26,8 +31,17 @@ args = "git add dist -f"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "git commit -m \"Deploy to GitHub Pages\""
+args = "git commit -m \"Deploy to GitHub Pages: $(date)\""
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
 args = "git subtree push --prefix dist origin gh-pages"
+
+[[workflows.workflow]]
+name = "Dev Server"
+author = 45562255
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "npm run dev"
